@@ -99,7 +99,7 @@
     - Após adicionar a linha, salve o arquivo e execute o seguinte comando:
 
       ```bash
-      sudo exportfs -a
+      sudo exportfs -rva
       ```
 
     - Para iniciar o serviço do NFS, execute o seguinte comando:
