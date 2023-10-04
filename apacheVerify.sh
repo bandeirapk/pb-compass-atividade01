@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Diretório no NFS onde os resultados serão armazenados
-NFS_DIR="/srv/sharenfs/antonioBandeiraMagalhaesNeto"
+# echo "Digite o nome do diretório: "; read NFS_DIR_USER
+
+NFS_DIR="/srv/share/antonioBandeira"
 
 # Nome do serviço
 SERVICO="Apache"
@@ -20,8 +22,8 @@ else
 fi
 
 # Nome dos arquivos de saída
-arquivo_online="$NFS_DIR/${SERVICO}_está_online.txt"
-arquivo_offline="$NFS_DIR/${SERVICO}_está_offline.txt"
+arquivo_online="${data_hora}_online.txt"
+arquivo_offline="${data_hora}_offline.txt"
 
 # Escrever os resultados nos arquivos correspondentes
 if [ "$mensagem" = "Online" ]; then
@@ -31,4 +33,3 @@ else
     echo "$data_hora $SERVICO $mensagem" > "$arquivo_offline"
     echo "$data_hora $SERVICO está offline"
 fi
-
