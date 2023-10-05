@@ -93,7 +93,7 @@
     - Dentro do arquivo, adicione a seguinte linha:
 
       ```bash
-      /srv/share [IpSubNet](rw,sync,no_root_squash,no_all_squash)
+      /srv/share [IpSubNet](rw,sync,root_squash,no_all_squash)
       ```
 
     - Após adicionar a linha, salve o arquivo e execute o seguinte comando:
