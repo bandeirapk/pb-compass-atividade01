@@ -25,7 +25,7 @@ archive_offline="${nfs_dir}/${date_hour}_${service}_inactive.txt"
 
 # Escrever os resultados nos arquivos correspondentes
 if [ "$mensagem" = "Online" ]; then
-    echo "$date_hour $service Está online e rodando normalmente." > "$archive_online"
+    echo "$date_hour $service Está online e rodando normalmente." >> "$archive_online"
 else
-    echo "$date_hour $service Está offline." > "$archive_offline"
+    echo "$date_hour $service Está offline." >> "$archive_offline"
 fi
