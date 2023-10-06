@@ -51,7 +51,7 @@
   - No painel esquerdo de navegação, vá em "Security Groups" em "Network & Security";
   - Vá ao grupo de segurança que está associado a sua instância;
   - Selecione o grupo de segurança e vá em "Inbound Rules";
-  - Clique em "Edit Inbound Rules" e adicione as portas que deseja liberar, Como a porta 80 e 443.
+  - Clique em "Edit Inbound Rules" e adicione as portas que deseja liberar, Como a porta 80, 111, 443 e 2049. Liberando o trafégo UDP e TCP de acordo com a descrição da atividade.
 
 > Requisitos do Linux:
 
@@ -127,13 +127,7 @@
       ```bash
       sudo mkdir /srv/share/seuNome
       ```
-
-    - Liberar permissão para o diretório criado, execute o seguinte comando:
-
-      ```bash
-      sudo chmod 777 /srv/share/seuNome
-      ```
-
+    
     - Entrar no diretório criado, execute o seguinte comando:
 
       ```bash
